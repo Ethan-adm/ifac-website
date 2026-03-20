@@ -1,0 +1,188 @@
+/* --- VARIABLES DE COULEURS (Bleus IFAC professionnels) --- */
+:root {
+    --primary-blue: #005b96;
+    --dark-blue: #03396c;
+    --light-blue: #b3cde0;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --bg-gray: #f4f7f6;
+}
+
+/* --- RESET & TYPOGRAPHIE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- HEADER / NAVBAR --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark-blue);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-blue);
+}
+
+.btn-contact {
+    background-color: var(--primary-blue);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: var(--dark-blue);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+    color: var(--white);
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* --- SECTION PÔLES (CARTES) --- */
+.poles-section {
+    padding: 80px 50px;
+    background-color: var(--bg-gray);
+    text-align: center;
+}
+
+.poles-section h2 {
+    font-size: 36px;
+    color: var(--dark-blue);
+    margin-bottom: 50px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    border: 2px solid var(--primary-blue);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    text-align: center;
+    padding: 20px;
+}
