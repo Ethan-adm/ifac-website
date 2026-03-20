@@ -1,0 +1,322 @@
+/* --- VARIABLES ET RESET --- */
+:root {
+    --primary: #0077c2;   /* Un bleu IFAC plus vif et moderne */
+    --dark: #004c8c;      /* Bleu sombre pour les textes et contrastes */
+    --accent: #ffcc00;    /* Une touche d'or pour le surlignage */
+    --light: #f4f8fb;     /* Fond très légèrement bleuté */
+    --white: #ffffff;
+    --text: #333333;
+    --text-muted: #666666;
+    
+    --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+    --shadow-medium: 0 8px 30px rgba(0,0,0,0.1);
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    --font-title: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    color: var(--dark);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- BOUTONS --- */
+.btn-pole, .btn-primary, .btn-contact {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--white);
+    color: var(--dark);
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btn-contact {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-contact:hover {
+    background-color: var(--dark);
+}
+
+.btn-pole {
+    background-color: var(--light);
+    color: var(--primary);
+    border: 1px solid #d0e1f0;
+    margin-top: auto;
+}
+
+.btn-pole:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-secondary-light {
+    color: var(--white);
+    opacity: 0.8;
+}
+
+.btn-secondary-light:hover {
+    opacity: 1;
+}
+
+/* --- HEADER --- */
+.main-header {
+    background-color: var(--white);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.main-nav a:not(.btn-contact):hover {
+    color: var(--primary);
+}
+
+/* --- HERO --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    color: var(--white);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: var(--white);
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+    color: var(--accent);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto; margin-right: auto;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* --- HISTOIRE --- */
+.histoire-section {
+    padding: 100px 0;
+}
+
+.histoire-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.histoire-content h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.histoire-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.histoire-valeurs {
+    display: grid;
+    gap: 20px;
+}
+
+.valeur-card {
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+/* --- POLES --- */
+.poles-section {
+    padding: 100px 0;
+    background-color: var(--light);
+}
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.poles-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.pole-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pole-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.pole-icon {
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+.pole-card h3 {
+    color: var(--primary);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pole-card p {
+    color: var(--text-muted);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* --- CHIFFRES --- */
+.chiffres-section {
+    background-color: var(--dark);
+    padding: 60px 0;
+}
+
+.chiffres-wrapper {
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
+}
+
+.chiffre-box {
+    text-align: center;
+}
+
+.chiffre-box h3 {
+    color: var(--white);
+    font-size: 48px;
+    font-weight: 700;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--white);
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.footer-about h3, .footer-links h3 {
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    text-align: center;
+}
